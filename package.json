@@ -1,0 +1,35 @@
+{
+  "name": "create-complete-nextjs",
+  "version": "1.0.0",
+  "description": "Bootstrap next app with what you really need",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fuadmahmud/create-complete-next.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "start": "ts-node ./index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fuad Mahmud",
+  "license": "ISC",
+  "bin": {
+    "create-complete-nextjs": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.3",
+    "@types/prompts": "^2.4.5",
+    "@vercel/ncc": "^0.38.0",
+    "commander": "^11.0.0",
+    "conf": "^11.0.2",
+    "cross-spawn": "^7.0.3",
+    "fast-glob": "^3.3.1",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
