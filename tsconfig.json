@@ -8,5 +8,5 @@
     "skipLibCheck": false
   },
   "exclude": ["templates", "dist"],
-  "include": ["./src", "template", "create-app.ts", "index.ts", "helpers"]
+  "include": ["create-app.ts", "index.ts", "helpers"]
 }

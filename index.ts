@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import { green, cyan, red } from 'picocolors'
-import Commander from 'commander'
+import { Command } from 'commander'
 import packageJson from './package.json'
 import prompts from 'prompts';
 import path from 'path';
@@ -29,13 +29,14 @@ const onPromptState = (state: any) => {
   }
 }
 
-const program = new Commander.Command(packageJson.name)
+const program = new Command(packageJson.name)
   .version(packageJson.version)
-  .argument('<project-directory>')
+  .arguments('<project-directory>')
   .usage(`${green('<project-directory>')}`)
   .action((name) => {
     projectPath = name
   })
+  .allowUnknownOption()
   .parse(process.argv);
 
 const packageManager = getPkgManager();

@@ -10,7 +10,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "dev": "ncc build ./index.ts -w -o dist/",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "build": "npm run release",
     "start": "ts-node ./index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

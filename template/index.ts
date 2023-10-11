@@ -125,6 +125,16 @@ export async function installTemplate({
     }
   }
 
+  if (shadcn.length) {
+    packageJson.dependencies = {
+      ...packageJson.dependencies,
+      "class-variance-authority": "^0.7.0",
+      "lucide-react": "^0.284.0",
+      "tailwind-merge": "^1.14.0",
+      "tailwindcss-animate": "^1.0.7"
+    }
+  }
+
   const devDeps = Object.keys(packageJson.devDependencies).length;
   if (!devDeps) delete packageJson.devDependencies;
 

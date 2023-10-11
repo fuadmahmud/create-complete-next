@@ -9,3 +9,13 @@ With technology addition including:
 - [shadcn-ui](https://ui.shadcn.com/)
 
 The technology that I use will continue to increase.
+
+How to run:
+- Using npx
+```code
+npx create-complete-nextjs <project-name>
+```
+- Using installation
+```
+npm start <project-name>
+```
